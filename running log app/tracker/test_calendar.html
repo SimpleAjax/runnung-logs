@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Log</title>
+    <link href="vanilla-calendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Running Log</h1>
+
+        <form id="run-form">
+            <h2>Log a New Run</h2>
+            <label for="run-date">Date:</label>
+            <input type="date" id="run-date" required>
+
+            <label for="run-km">Kilometers:</label>
+            <input type="number" id="run-km" step="0.1" min="0.1" required>
+
+            <button type="submit">Save Run</button>
+        </form>
+
+        <div id="status"></div>
+
+        <h2>Calendar View</h2>
+        <div id="calendar-container">
+             <div id="calendar"></div>
+        </div>
+        <div id="selected-day-info">Click on a date to see details.</div>
+
+    </div> <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="vanilla-calendar.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
